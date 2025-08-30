@@ -168,7 +168,7 @@ pre {
   }
 
   .sidebar {
-    width: 100%;   /* take full width */
+    width: 100%;   
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -204,6 +204,6 @@ pre {
   }
 
   .resume-download button {
-    width: 100%; /* make button full width on mobile */
+    width: 100%; 
   }
 }
