@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - VS Code Theme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="vscode-window">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>{ }</h2>
+       <div class="profile-pic">
+    <img src="akeeb.jpg" alt="Profile Picture">
+  </div>
+      <ul>
+        <li class="active" data-file="about">about.html</li>
+        <li data-file="experience">experience.js</li>
+        <li data-file="projects">projects.js</li>
+        <li data-file="skills">skills.css</li>
+        <li data-file="contact">contact.json</li>
+      </ul>
+      <div class="resume-download">
+    <a href="resume.pdf" download>
+      <button>Resume</button>
+    </a>
+  </div>
+    </div>
+     <!-- Main Editor -->
+    <div class="editor">
+      <div class="editor-header">
+        <span class="tab active" data-file="about">about.html</span>
+        <span class="tab" data-file="experience">experience.js</span>
+        <span class="tab" data-file="projects">projects.js</span>
+        <span class="tab" data-file="skills">skills.css</span>
+        <span class="tab" data-file="contact">contact.json</span>
+      </div>
+      <div class="editor-body">
+        <pre><code id="file-content"></code></pre>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+ <script src="script.js"></script>
+</body>
+</html>

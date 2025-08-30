@@ -1,0 +1,162 @@
+/* VS Code Dark Theme Portfolio */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+
+body {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.vscode-window {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  height: 90vh;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #252526;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Sidebar */
+/* Profile Picture */
+.profile-pic {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* makes it a perfect circle */
+  object-fit: cover;
+  border: 2px solid #61dafb; /* optional border to match VS Code theme */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* soft glow */
+}
+
+/* Resume download button inside sidebar */
+.resume-download {
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.resume-download button {
+  width: 80%;
+  background-color: #1e1e1e;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resume-download button:hover {
+  background-color: #61dafb;
+  color: #1e1e1e;
+}
+
+.sidebar {
+  width: 200px;
+  background: #333333;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: #61dafb;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  background: #007acc;
+  color: #fff;
+}
+
+/* Editor */
+.editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  background: #2d2d2d;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.tab {
+  background: #1e1e1e;
+  padding: 5px 12px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #252526;
+  border: 1px solid #444;
+  border-bottom: none;
+}
+
+.editor-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.tag { color: #569cd6; }
+.highlight { color: #ce9178; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vscode-window {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .editor-body {
+    height: auto;
+  }
+}
