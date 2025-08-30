@@ -8,60 +8,61 @@ const files = {
 `,
   about: `
 
-Hello, I’m <span class="highlight">Mohmmad Akeeb</span>
+Hello, I’m <span class="highlight">Bashee Bilal</span>
 
-I’m an <span class="highlight">AI/ML Engineer</span> passionate about solving real-world problems 
-using data-driven intelligence. My journey started with a love for mathematics and coding, 
-and over time I’ve developed expertise in building <span class="highlight">machine learning models, deep learning architectures, and intelligent web applications</span>.  
+Passionate and creative Front-End Web Developer with a keen eye for design and user experience. Pursuing a B.Tech degree in Computer Science & Engineering at the Central University of Kashmir. Skilled in building responsive, dynamic, and visually striking
+websites. Highly adaptable, a fast learner, and driven by enthusiasm for continuous growth.  
   `,
 
   experience: `
 Work Experience:
 
-AI/ML Engineer – Freelance
-- Designed and trained machine learning models for clients.  
-- Built predictive systems using <span class="highlight">TensorFlow</span> and <span class="highlight">PyTorch</span>.  
-- Deployed models into scalable web applications.  
+<span class="highlight">Frontend Web Development Intern</span>
+ Internpe | Remote | Jan 2025 - Mar 2025
+ -Successfully completed four end-to-end front-end development projects.
+ -Developed responsive, visually appealing webpages.
+ -Strengthened frontend optimization skills.
 
-Intern – Data Science, Tech Startup 
-- Collected and cleaned large datasets for analysis.  
-- Developed <span class="highlight">NLP pipeline</span> for sentiment analysis.  
-- Automated reporting using Python and Pandas.  
+<span class="highlight">Web Designer & Developer (Contributor)</span>
+ CodeSquad - Central University of Kashmir | 2024 - Present
+ -Contributed to the design and development of the CodeSquad university group website.
+ -Ensured professional and attractive design aesthetics
   `,
 
   projects: `
 Featured Projects:
 
-1. <a href="https://yourportfolio.com/chatbot" target="_blank" class="highlight">AI-Powered Chatbot</a> – Conversational assistant trained with NLP.  
+1. <a href="https://basheebilalwani.github.io/ecommerce/" target="_blank" class="highlight"> E-commerce Frontend:</a>
 
-2. <a href="https://yourportfolio.com/image-classifier" target="_blank" class="highlight">Image Classifier</a> – Deep learning model for real-time image recognition.
+2. <a href="https://basheebilalwani.github.io/reg_form/" target="_blank" class="highlight">Contact Us Page</a> 
 
-3. <a href="https://yourportfolio.com/stock-predictor" target="_blank" class="highlight">Stock Price Predictor</a> – Time-series forecasting using LSTM networks.  
+3. <a href="https://basheebilalwani.github.io/footer/" target="_blank" class="highlight">Footer Design</a>  
 
-4. <a href="https://yourportfolio.com" target="_blank" class="highlight">Portfolio Website</a> – Built in VS Code theme with responsive design.  
+4. <a href="https://basheebilalwani.github.io/todo_list/" target="_blank" class="highlight">To-Do List App</a>  
+
+5. <a href="https://basheebilalwani.github.io/calculator/" target="_blank" class="highlight">Calculator App</a>  
 `
 ,
 
   skills: `
 Skills:
 
-- Programming: Python, JavaScript, C++  
-- Libraries: NumPy, Pandas, Matplotlib, Scikit-Learn, TensorFlow, PyTorch  
-- Web Dev: React.js, Node.js, Express, MySQL  
-- Tools: Git, Docker, Jupyter, VS Code  
-- Concepts: Machine Learning, Deep Learning, NLP, Computer Vision, Data Analysis  
+Frontend Development: HTML5, CSS3, JavaScript, Tailwind CSS, Responsive Design
+UI/UX Design: Prototyping, Webpage Designing, Figma, Canva
+Version Control: Git, GitHub
+Soft Skills: Creativity, Attention to Detail, Team Collaboration, Adaptability, Quick Learner 
   `,
 
   contact: `
 Contact:
 
-Email: <a href="mailto:mohammadakeeb786@gmail.com" class="highlight">mohammadakeeb786@gmail.com</a>
+Email: <a href="mailto:basheebilalwani@gmail.com@gmail.com" class="highlight">basheebilalwani@gmail.com</a>
 
-LinkedIn: <a href="https://www.linkedin.com/in/mohmmad-akeeb-5b2114252/" target="_blank" class="highlight">https://www.linkedin.com/in/mohmmad-akeeb-5b2114252/</a>
+LinkedIn: <a href="www.linkedin.com/in/bashee-bilal-6984a12b2" target="_blank" class="highlight">Bashee Bilal</a>
 
-GitHub: <a href="https://github.com/akeeb-ai" target="_blank" class="highlight">github.com/akeeb-ai</a>
+GitHub: <a href="https://github.com/basheebilalwani" target="_blank" class="highlight">basheebilalwani</a>
 
-Portfolio: <a href="https://mohammadakeeb.dev" target="_blank" class="highlight">mohammadakeeb.dev</a>
+Portfolio: <a href="https://mohammadakeeb.dev" target="_blank" class="highlight">Bashee Bilal</a>
 
 `,}
 
