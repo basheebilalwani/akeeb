@@ -16,7 +16,7 @@ and over time I’ve developed expertise in building <span class="highlight">mac
   `,
 
   experience: `
-Work Experience
+Work Experience:
 
 AI/ML Engineer – Freelance
 - Designed and trained machine learning models for clients.  
@@ -30,7 +30,7 @@ Intern – Data Science, Tech Startup
   `,
 
   projects: `
-Featured Projects
+Featured Projects:
 
 1. <a href="https://yourportfolio.com/chatbot" target="_blank" class="highlight">AI-Powered Chatbot</a> – Conversational assistant trained with NLP.  
 
@@ -43,7 +43,7 @@ Featured Projects
 ,
 
   skills: `
-Skills
+Skills:
 
 - Programming: Python, JavaScript, C++  
 - Libraries: NumPy, Pandas, Matplotlib, Scikit-Learn, TensorFlow, PyTorch  
@@ -53,7 +53,7 @@ Skills
   `,
 
   contact: `
-Contact
+Contact:
 
 Email: <a href="mailto:mohammadakeeb786@gmail.com" class="highlight">mohammadakeeb786@gmail.com</a>
 
