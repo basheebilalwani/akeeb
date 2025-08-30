@@ -100,31 +100,33 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* Make editor header scroll nicely on mobile */
 .editor-header {
   display: flex;
-  background: #2d2d2d;
-  padding: 10px;
-  gap: 10px;
-  border-bottom: 1px solid #444;
-  overflow-x: auto;    /* allow horizontal scrolling */
-  white-space: nowrap; /* prevent wrapping */
-  scrollbar-width: thin; /* firefox */
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  background: #1e1e1e; /* VS Code dark background */
+  scrollbar-width: none; /* hide scrollbar Firefox */
 }
 
 .editor-header::-webkit-scrollbar {
-  height: 6px; /* smaller scrollbar for tabs */
-}
-
-.editor-header::-webkit-scrollbar-thumb {
-  background: #444;
-  border-radius: 3px;
+  display: none; /* hide scrollbar Chrome/Safari */
 }
 
 .editor-header .tab {
-  flex: 0 0 auto; /* prevent shrinking */
-  padding: 8px 15px;
+  flex: 0 0 auto; /* prevent tabs from shrinking */
+  padding: 10px 16px;
+  color: #ccc;
+  cursor: pointer;
+  border-right: 1px solid #333;
 }
 
+.editor-header .tab.active {
+  background: #252526;
+  color: #fff;
+  border-bottom: 2px solid #007acc; /* VS Code blue highlight */
+}
 
 .tab {
   background: #1e1e1e;
