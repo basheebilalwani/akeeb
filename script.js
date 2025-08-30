@@ -52,6 +52,26 @@ Portfolio: <a href="https://mohammadakeeb.dev" target="_blank" class="highlight"
 
 `,}
 
+  // Mobile hamburger menu
+  const burger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.overlay');
+
+  function toggleMenu() {
+    const isOpen = sidebar.classList.toggle('open');
+    overlay.classList.toggle('active', isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  burger.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+
+  // Close drawer after selecting a menu item (keeps your existing click handlers)
+  document.querySelectorAll('.sidebar li').forEach(li => {
+    li.addEventListener('click', () => {
+      if (sidebar.classList.contains('open')) toggleMenu();
+    });
+  });
 
 document.addEventListener("DOMContentLoaded", () => {
   const fileContent = document.getElementById("file-content");
@@ -88,3 +108,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const mobileContent = document.querySelector('.mobile-content');
+const fileContent = document.getElementById('file-content');
+
+// Function to load content into both editor and mobile view
+function loadContent(file) {
+  const content = files[file];
+  fileContent.innerHTML = content; // desktop
+  if (window.innerWidth <= 768) {
+    mobileContent.innerHTML = content; // mobile
+  }
+}
+
+// Sidebar clicks
+document.querySelectorAll('.sidebar ul li').forEach(item => {
+  item.addEventListener('click', () => {
+    const file = item.getAttribute('data-file');
+    let content = "";
+
+   document.querySelectorAll('.sidebar ul li').forEach(item => {
+  item.addEventListener('click', () => {
+    const file = item.getAttribute('data-file');
+    loadContent(file, files[file]); // Use HTML from files object
+  });
+});
+
+
+    loadContent(file, content);
+  });
+});
+
+

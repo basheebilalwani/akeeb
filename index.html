@@ -10,10 +10,12 @@
   <div class="vscode-window">
   
     <div class="sidebar">
+       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+
        <div class="profile-pic">
     <img src="akeeb.jpg" alt="Profile Picture">
   </div>
-      <ul>
+      <ul id="nav-links">
         <li class="active" data-file="about">About</li>
         <li data-file="experience">Experience</li>
         <li data-file="projects">Projects</li>
@@ -26,6 +28,9 @@
     </a>
   </div>
     </div>
+
+<div class="overlay"></div>
+
     
     <div class="editor">
       <div class="editor-header">
@@ -35,12 +40,17 @@
         <span class="tab" data-file="skills">Skills</span>
         <span class="tab" data-file="contact">Contact</span>
       </div>
+
       <div class="editor-body">
         <pre><code id="file-content"></code></pre>
       </div>
     </div>
   </div>
     </div>
+      <div class="mobile-content">
+  <h2>Welcome to my Portfolio 👋</h2>
+  <p>Use the menu to explore my work and experience.</p>
+</div>
   </div>
  <script src="script.js"></script>
 </body>
