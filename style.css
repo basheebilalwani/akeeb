@@ -1,4 +1,3 @@
-/* VS Code Dark Theme Portfolio */
 * {
   margin: 0;
   padding: 0;
@@ -27,8 +26,6 @@ body {
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-/* Sidebar */
-/* Profile Picture */
 .profile-pic {
   text-align: center;
   margin: 20px 0;
@@ -37,13 +34,13 @@ body {
 .profile-pic img {
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* makes it a perfect circle */
+  border-radius: 50%; 
   object-fit: cover;
-  border: 2px solid #61dafb; /* optional border to match VS Code theme */
+  border: 2px solid #61dafb; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* soft glow */
 }
 
-/* Resume download button inside sidebar */
+
 .resume-download {
   text-align: center;
   margin: 10px 0 20px 0;
@@ -100,22 +97,22 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* Make editor header scroll nicely on mobile */
+
 .editor-header {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
   max-width: 100%;
-  background: #1e1e1e; /* VS Code dark background */
-  scrollbar-width: none; /* hide scrollbar Firefox */
+  background: #1e1e1e; 
+  scrollbar-width: none; 
 }
 
 .editor-header::-webkit-scrollbar {
-  display: none; /* hide scrollbar Chrome/Safari */
+  display: none; 
 }
 
 .editor-header .tab {
-  flex: 0 0 auto; /* prevent tabs from shrinking */
+  flex: 0 0 auto; 
   padding: 10px 16px;
   color: #ccc;
   cursor: pointer;
@@ -125,7 +122,7 @@ body {
 .editor-header .tab.active {
   background: #252526;
   color: #fff;
-  border-bottom: 2px solid #007acc; /* VS Code blue highlight */
+  border-bottom: 2px solid #007acc; 
 }
 
 .tab {
@@ -223,6 +220,6 @@ pre {
   }
 
   .resume-download button {
-    width: 100%; /* make button full width on mobile */
+    width: 100%;
   }
 }

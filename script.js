@@ -1,4 +1,3 @@
-// File contents
 const files = {
   about: `
 
@@ -59,30 +58,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebarItems = document.querySelectorAll(".sidebar li");
   const tabs = document.querySelectorAll(".tab");
 
-  // Load default file
+
   fileContent.innerHTML = files.about;
 
   function switchFile(file) {
-    // Update content
+    
     fileContent.innerHTML = files[file];
 
-    // Highlight sidebar
+    
     sidebarItems.forEach(li => li.classList.remove("active"));
     document.querySelector(`.sidebar li[data-file="${file}"]`).classList.add("active");
 
-    // Highlight tabs
+    
     tabs.forEach(tab => tab.classList.remove("active"));
     document.querySelector(`.tab[data-file="${file}"]`).classList.add("active");
   }
 
-  // Sidebar clicks
+ 
   sidebarItems.forEach(li => {
     li.addEventListener("click", () => {
       switchFile(li.dataset.file);
     });
   });
 
-  // Tab clicks
+ 
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       switchFile(tab.dataset.file);
