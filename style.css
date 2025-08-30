@@ -100,14 +100,31 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .editor-header {
+  display: flex;
   background: #2d2d2d;
   padding: 10px;
-  display: flex;
   gap: 10px;
   border-bottom: 1px solid #444;
+  overflow-x: auto;    /* allow horizontal scrolling */
+  white-space: nowrap; /* prevent wrapping */
+  scrollbar-width: thin; /* firefox */
 }
+
+.editor-header::-webkit-scrollbar {
+  height: 6px; /* smaller scrollbar for tabs */
+}
+
+.editor-header::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+.editor-header .tab {
+  flex: 0 0 auto; /* prevent shrinking */
+  padding: 8px 15px;
+}
+
 
 .tab {
   background: #1e1e1e;
@@ -204,6 +221,6 @@ pre {
   }
 
   .resume-download button {
-    width: 100%; 
+    width: 100%; /* make button full width on mobile */
   }
 }
