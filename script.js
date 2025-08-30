@@ -1,4 +1,11 @@
 const files = {
+   home: `
+
+
+
+<p>Welcome to my <span class="highlight">portfolio!</span></p>
+<p>Use the <span class="highlight">menu</span> to explore my work and experience.</p>
+`,
   about: `
 
 Hello, I’m <span class="highlight">Mohmmad Akeeb</span>
@@ -26,8 +33,11 @@ Intern – Data Science, Tech Startup
 Featured Projects
 
 1. <a href="https://yourportfolio.com/chatbot" target="_blank" class="highlight">AI-Powered Chatbot</a> – Conversational assistant trained with NLP.  
-2. <a href="https://yourportfolio.com/image-classifier" target="_blank" class="highlight">Image Classifier</a> – Deep learning model for real-time image recognition.  
+
+2. <a href="https://yourportfolio.com/image-classifier" target="_blank" class="highlight">Image Classifier</a> – Deep learning model for real-time image recognition.
+
 3. <a href="https://yourportfolio.com/stock-predictor" target="_blank" class="highlight">Stock Price Predictor</a> – Time-series forecasting using LSTM networks.  
+
 4. <a href="https://yourportfolio.com" target="_blank" class="highlight">Portfolio Website</a> – Built in VS Code theme with responsive design.  
 `
 ,
@@ -46,8 +56,11 @@ Skills
 Contact
 
 Email: <a href="mailto:mohammadakeeb786@gmail.com" class="highlight">mohammadakeeb786@gmail.com</a>
+
 LinkedIn: <a href="https://www.linkedin.com/in/mohmmad-akeeb-5b2114252/" target="_blank" class="highlight">https://www.linkedin.com/in/mohmmad-akeeb-5b2114252/</a>
+
 GitHub: <a href="https://github.com/akeeb-ai" target="_blank" class="highlight">github.com/akeeb-ai</a>
+
 Portfolio: <a href="https://mohammadakeeb.dev" target="_blank" class="highlight">mohammadakeeb.dev</a>
 
 `,}
@@ -74,40 +87,47 @@ Portfolio: <a href="https://mohammadakeeb.dev" target="_blank" class="highlight"
   });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const defaultFile = "home"; 
   const fileContent = document.getElementById("file-content");
+  const mobileContent = document.querySelector('.mobile-content'); // make sure you have this
   const sidebarItems = document.querySelectorAll(".sidebar li");
   const tabs = document.querySelectorAll(".tab");
 
+  // Load Home content by default
+  fileContent.innerHTML = files[defaultFile];
+  mobileContent.innerHTML = files[defaultFile];
 
-  fileContent.innerHTML = files.about;
+  // Mark Home as active
+  document.querySelector(`.sidebar li[data-file="${defaultFile}"]`).classList.add("active");
+  document.querySelector(`.tab[data-file="${defaultFile}"]`).classList.add("active");
 
   function switchFile(file) {
-    
-    fileContent.innerHTML = files[file];
+    const content = files[file];
+    fileContent.innerHTML = content;
+    if (window.innerWidth <= 768) {
+      mobileContent.innerHTML = content;
+    }
 
-    
     sidebarItems.forEach(li => li.classList.remove("active"));
     document.querySelector(`.sidebar li[data-file="${file}"]`).classList.add("active");
 
-    
     tabs.forEach(tab => tab.classList.remove("active"));
     document.querySelector(`.tab[data-file="${file}"]`).classList.add("active");
   }
 
- 
   sidebarItems.forEach(li => {
     li.addEventListener("click", () => {
       switchFile(li.dataset.file);
     });
   });
 
- 
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       switchFile(tab.dataset.file);
     });
   });
 });
+
 
 const mobileContent = document.querySelector('.mobile-content');
 const fileContent = document.getElementById('file-content');
