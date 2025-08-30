@@ -160,7 +160,7 @@ pre {
     height: auto;
   }
 }
-/* Responsive */
+
 @media (max-width: 768px) {
   .vscode-window {
     flex-direction: column;
