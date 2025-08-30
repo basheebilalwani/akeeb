@@ -65,7 +65,6 @@ Portfolio: <a href="https://mohammadakeeb.dev" target="_blank" class="highlight"
 
 `,}
 
-  // Mobile hamburger menu
   const burger = document.querySelector('.hamburger');
   const sidebar = document.querySelector('.sidebar');
   const overlay = document.querySelector('.overlay');
@@ -79,7 +78,7 @@ Portfolio: <a href="https://mohammadakeeb.dev" target="_blank" class="highlight"
   burger.addEventListener('click', toggleMenu);
   overlay.addEventListener('click', toggleMenu);
 
-  // Close drawer after selecting a menu item (keeps your existing click handlers)
+  
   document.querySelectorAll('.sidebar li').forEach(li => {
     li.addEventListener('click', () => {
       if (sidebar.classList.contains('open')) toggleMenu();
@@ -88,16 +87,15 @@ Portfolio: <a href="https://mohammadakeeb.dev" target="_blank" class="highlight"
 
 document.addEventListener("DOMContentLoaded", () => {
   const defaultFile = "home"; 
+  loadContent(defaultFile);
   const fileContent = document.getElementById("file-content");
-  const mobileContent = document.querySelector('.mobile-content'); // make sure you have this
+  const mobileContent = document.querySelector('.mobile-content'); 
   const sidebarItems = document.querySelectorAll(".sidebar li");
   const tabs = document.querySelectorAll(".tab");
 
-  // Load Home content by default
   fileContent.innerHTML = files[defaultFile];
   mobileContent.innerHTML = files[defaultFile];
 
-  // Mark Home as active
   document.querySelector(`.sidebar li[data-file="${defaultFile}"]`).classList.add("active");
   document.querySelector(`.tab[data-file="${defaultFile}"]`).classList.add("active");
 
@@ -132,16 +130,23 @@ document.addEventListener("DOMContentLoaded", () => {
 const mobileContent = document.querySelector('.mobile-content');
 const fileContent = document.getElementById('file-content');
 
-// Function to load content into both editor and mobile view
 function loadContent(file) {
-  const content = files[file];
-  fileContent.innerHTML = content; // desktop
-  if (window.innerWidth <= 768) {
-    mobileContent.innerHTML = content; // mobile
-  }
+    const content = files[file];
+    fileContent.innerHTML = content;
+
+    if (window.innerWidth <= 768) {
+        mobileContent.innerHTML = content;
+
+        mobileContent.classList.remove("home", "overlay");
+
+        if (file === "home") {
+            mobileContent.classList.add("home");
+        } else {
+            mobileContent.classList.add("overlay");
+        }
+    }
 }
 
-// Sidebar clicks
 document.querySelectorAll('.sidebar ul li').forEach(item => {
   item.addEventListener('click', () => {
     const file = item.getAttribute('data-file');
@@ -150,7 +155,7 @@ document.querySelectorAll('.sidebar ul li').forEach(item => {
    document.querySelectorAll('.sidebar ul li').forEach(item => {
   item.addEventListener('click', () => {
     const file = item.getAttribute('data-file');
-    loadContent(file, files[file]); // Use HTML from files object
+    loadContent(file, files[file]); 
   });
 });
 

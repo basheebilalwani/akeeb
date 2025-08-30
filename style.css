@@ -37,7 +37,7 @@ body {
   border-radius: 50%; 
   object-fit: cover;
   border: 2px solid #61dafb; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* soft glow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
 }
 
 
@@ -59,8 +59,8 @@ body {
 }
 
 .resume-download button:hover {
-  background-color: #61dafb;
-  color: #1e1e1e;
+  background-color: #007acc;
+  color: #fff;
 }
 
 .sidebar {
@@ -91,7 +91,6 @@ body {
   color: #fff;
 }
 
-/* Editor */
 .editor {
   flex: 1;
   display: flex;
@@ -154,9 +153,8 @@ pre {
 
 #file-content, .mobile-content {
   white-space: pre-wrap; 
-z-index: 10; /* make sure it’s above overlay */}
+z-index: 10; }
 
-/* Hamburger (hidden on desktop) */
 .hamburger {
   display: none;
   position: fixed;
@@ -173,7 +171,6 @@ z-index: 10; /* make sure it’s above overlay */}
   cursor: pointer;
 }
 
-/* Overlay for drawer */
 .overlay {
   display: none;
   position: fixed;
@@ -183,7 +180,6 @@ z-index: 10; /* make sure it’s above overlay */}
 }
 .overlay.active { display: block; }
 
-/* Stagger animation for menu items */
 .sidebar li {
   opacity: 1;
   transform: none;
@@ -234,18 +230,16 @@ z-index: 10; /* make sure it’s above overlay */}
 
 }
 
-/* hide by default */
 .mobile-content {
   display: none;
 }
 
-/* show only on mobile */
 @media (max-width: 768px) {
   .editor {
-    display: none !important; /* hide big editor */
+    display: none !important; 
   }
-
-  .mobile-content {
+  
+.mobile-content.home {
     display: flex !important;
     flex-direction: column;
     align-items: center;
@@ -257,6 +251,22 @@ z-index: 10; /* make sure it’s above overlay */}
     font-size: 18px;
     background: #1e1e1e;
     overflow-y: auto;
-  }
+}
+.mobile-content.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block !important;      
+    text-align: left;              
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    background: #1e1e1e;
+    overflow-y: auto;              
+    line-height: 1.6;              
+}
+
 }
 
