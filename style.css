@@ -160,3 +160,50 @@ pre {
     height: auto;
   }
 }
+/* Responsive */
+@media (max-width: 768px) {
+  .vscode-window {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;   /* take full width */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .sidebar li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .editor {
+    width: 100%;
+    min-height: 60vh;
+  }
+
+  .editor-body {
+    height: auto;
+    padding: 15px;
+  }
+
+  .profile-pic img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .resume-download button {
+    width: 100%; /* make button full width on mobile */
+  }
+}
